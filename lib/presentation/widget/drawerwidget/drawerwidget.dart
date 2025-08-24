@@ -15,7 +15,7 @@ class DrawerWidget extends StatelessWidget {
       itemBuilder: (context, index) {
         return index == 0
             ? BuildHeader(fontSize: fontSize)
-            : BuildMenuItem(index:index, fontSize:fontSize);
+            : BuildMenuItem(index: index, fontSize: fontSize);
       },
     );
   }

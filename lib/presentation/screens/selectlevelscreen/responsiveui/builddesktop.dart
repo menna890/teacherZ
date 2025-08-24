@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:teacherz/models/dev_course.dart';
-import 'package:teacherz/presentation/widget/courseviewwidget.dart';
+import 'package:teacherz/presentation/screens/user_information_screen.dart';
 import 'package:teacherz/presentation/widget/drawerwidget/drawerwidget.dart';
 
 class buildDesktop extends StatelessWidget {
@@ -12,24 +12,10 @@ class buildDesktop extends StatelessWidget {
     return Row(
       children: [
         const Expanded(flex: 1, child: DrawerWidget()),
-        Expanded(flex: 6, child: buildBody()),
+        Expanded(flex: 6, child: InformationScreen()),
       ],
     );
   }
 
-  Widget buildBody() => Container(
-    color: Colors.grey[200],
-    padding: const EdgeInsets.all(8.0),
-    child: Column(
-      children: [
-        Expanded(
-          child: CourseViewWidget(
-            onCourseChanged: onCourseChanged,
-            isHorizontal: true,
-          ),
-        ),
-        
-      ],
-    ),
-  );
+  Widget buildBody() => Container(color: Colors.grey[200]);
 }

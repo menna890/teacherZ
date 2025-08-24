@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:teacherz/constant/colors.dart';
 import 'package:teacherz/data/drawertem.dart';
+import 'package:teacherz/helper/navigation_helper.dart';
 
 class BuildMenuItem extends StatelessWidget {
   final int index;
@@ -23,8 +24,8 @@ class BuildMenuItem extends StatelessWidget {
       ),
       title: AutoSizeText(
         drawerItems[index - 1].title,
-        minFontSize: 18,
-        maxFontSize: 28,
+        minFontSize: 10,
+        maxFontSize: 12,
         style: TextStyle(
           fontSize: fontSize,
           color:
@@ -35,12 +36,12 @@ class BuildMenuItem extends StatelessWidget {
       ),
       selected: currentRoute == drawerItems[index - 1].route,
       selectedTileColor: Colors.deepPurple.withOpacity(0.1),
-      onTap: () {
-        Navigator.pop(context);
-        if (currentRoute != drawerItems[index - 1].route) {
-          Navigator.pushNamed(context, drawerItems[index - 1].route);
-        }
-      },
+      onTap:
+          () => NavigationHelper.handleNavigation(
+            context,
+            currentRoute,
+            drawerItems[index - 1],
+          ),
     );
   }
 }

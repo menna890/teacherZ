@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:teacherz/presentation/screens/homescreen.dart';
 import 'package:teacherz/presentation/screens/resources_screen.dart';
 import 'package:teacherz/presentation/screens/profile_screen.dart';
+import 'package:teacherz/presentation/screens/selectlevelscreen/selectlevelscreen.dart';
 import 'package:teacherz/presentation/screens/settings_screen.dart';
 import 'package:teacherz/presentation/screens/help_screen.dart';
 import 'package:teacherz/presentation/screens/login_screen.dart';
@@ -21,6 +22,8 @@ class AppRouter {
         return MaterialPageRoute(builder: (_) => const HelpScreen());
       case '/login':
         return MaterialPageRoute(builder: (_) => const LoginScreen());
+      case "/select-level":
+        return MaterialPageRoute(builder: (_) => const SelectLevelScreen());
       default:
         return MaterialPageRoute(
           builder: (_) => const Scaffold(

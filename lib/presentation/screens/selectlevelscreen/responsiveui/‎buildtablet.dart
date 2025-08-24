@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:teacherz/models/dev_course.dart';
-import 'package:teacherz/presentation/widget/courseviewwidget.dart';
 import 'package:teacherz/presentation/widget/drawerwidget/drawerwidget.dart';
 
 class BuildTablet extends StatelessWidget {
@@ -13,7 +12,7 @@ class BuildTablet extends StatelessWidget {
         const Expanded(flex: 2, child: DrawerWidget()),
         Expanded(
           flex: 5,
-          child: CourseViewWidget(onCourseChanged: onCourseChanged),
+          child: Container(color: Colors.pink),
         ),
       ],
     );

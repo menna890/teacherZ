@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 List<DrawerItem> drawerItems = [
   DrawerItem(title: 'Home', icon: Icons.home, route: '/'),
+  DrawerItem(title: "Select Level", icon: Icons.book, route: "/select-level"),
   DrawerItem(title: 'My Courses', icon: Icons.book, route: '/'),
   DrawerItem(title: 'Exams', icon: Icons.assignment, route: '/'),
   DrawerItem(title: 'Resources', icon: Icons.folder, route: '/resources'),

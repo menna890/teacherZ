@@ -45,6 +45,8 @@ bool _showSplash = true;
       splitScreenMode: true,
       minTextAdapt: true,
       builder: (context, child) => MaterialApp(
+        
+  scrollBehavior: const ScrollBehavior().copyWith(scrollbars: false),
         debugShowCheckedModeBanner: false,
         onGenerateRoute: widget.appRouter.generateRoute,
         initialRoute: '/',
